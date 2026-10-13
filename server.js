@@ -666,16 +666,31 @@ app.get('/mcp/sse', (req, res) => {
   });
 });
 
+// Serve OpenAPI Specification for ChatGPT Actions & Custom GPTs
+app.get('/openapi.json', (req, res) => {
+  const openApiPath = path.join(__dirname, 'public', 'openapi.json');
+  if (fs.existsSync(openApiPath)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.sendFile(openApiPath);
+  } else {
+    res.status(404).json({ error: "OpenAPI spec not found" });
+  }
+});
+
 // Fallback to index.html for SPA routing
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(` LandAction - Open Land Intelligence Platform (Free Clone)`);
-  console.log(` Web Server listening on: http://localhost:${PORT}`);
-  console.log(` MCP Endpoint active at:  http://localhost:${PORT}/mcp`);
-  console.log(` 125 Tools available - 100% Free (0 credits)`);
-  console.log(`=======================================================`);
-});
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(` LandAction - Open Land Intelligence Platform (Free Clone)`);
+    console.log(` Web Server listening on: http://localhost:${PORT}`);
+    console.log(` MCP Endpoint active at:  http://localhost:${PORT}/mcp`);
+    console.log(` 125 Tools available - 100% Free (0 credits)`);
+    console.log(`=======================================================`);
+  });
+}
+
+export default app;

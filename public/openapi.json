@@ -1,0 +1,133 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "LandAction API",
+    "description": "Autonomous Cadastral Intelligence, Land Due Diligence, Guideline Valuation, and TNCDBR 2019 Building Scope API for India.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://land-action.vercel.app",
+      "description": "Production Server"
+    }
+  ],
+  "paths": {
+    "/api/v1/verify": {
+      "post": {
+        "summary": "Verify Land Parcel (33 Automated Checks)",
+        "operationId": "verifyLandParcel",
+        "description": "Runs 33 statutory due diligence checks on a land parcel in Tamil Nadu across revenue records, encumbrance history, water body buffers, coastal CRZ, and zoning.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "survey_no": {
+                    "type": "string",
+                    "description": "Survey number (e.g. '112/5', '163/2', '42/2')",
+                    "example": "112/5"
+                  },
+                  "taluk": {
+                    "type": "string",
+                    "description": "Taluk name",
+                    "example": "Sholinganallur"
+                  },
+                  "district": {
+                    "type": "string",
+                    "description": "District name",
+                    "example": "Chennai"
+                  }
+                },
+                "required": ["survey_no"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Due diligence verification report with 33 checks and safety index."
+          }
+        }
+      }
+    },
+    "/api/v1/tools/{toolId}": {
+      "post": {
+        "summary": "Run Specialized Real Estate Mini Tool",
+        "operationId": "runMiniTool",
+        "description": "Executes specialized real estate calculators (stamp duty, guideline value, zoning check, Patta verification, build scope).",
+        "parameters": [
+          {
+            "name": "toolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["guideline_value", "stamp_duty", "zone_check", "fetch_land_record", "ec_transactions", "build_scope"]
+            }
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "survey_no": { "type": "string", "example": "112/5" },
+                  "property_value": { "type": "number", "example": 10000000 },
+                  "plot_area_sqft": { "type": "number", "example": 4800 },
+                  "road_width_m": { "type": "number", "example": 12 }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tool calculation result."
+          }
+        }
+      }
+    },
+    "/api/v1/chat": {
+      "post": {
+        "summary": "Veritas AI Real Estate Legal Inquiry",
+        "operationId": "askVeritasAI",
+        "description": "Queries Veritas AI real estate copilot with statutory Tamil Nadu law references.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": { "type": "string", "example": "Can I construct Stilt + 5 floors on a 12m road in Karapakkam?" }
+                },
+                "required": ["message"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Legal response with citations."
+          }
+        }
+      }
+    },
+    "/api/v1/states": {
+      "get": {
+        "summary": "List Pan-India Land Record Portals",
+        "operationId": "listStatePortals",
+        "description": "Lists official government revenue and registration portals for 28 Indian states.",
+        "responses": {
+          "200": {
+            "description": "List of state portals."
+          }
+        }
+      }
+    }
+  }
+}
