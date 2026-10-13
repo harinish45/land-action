@@ -1,0 +1,116 @@
+{
+  "total_states_covered": 28,
+  "portal_ecosystem": "National Land Records Modernization Programme (NLRMP) / Bhu-Aadhaar",
+  "states": [
+    {
+      "state_code": "TN",
+      "state_name": "Tamil Nadu",
+      "portal_name": "Anytime Anywhere e-Services (Patta Chitta)",
+      "revenue_url": "https://eservices.tn.gov.in/eservicesnew/land/chitta.html",
+      "registration_portal": "TN Department of Registration (Star 2.0)",
+      "registration_url": "https://tnreginet.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Chennai", "Chengalpattu", "Kanchipuram", "Thiruvallur", "Coimbatore"]
+    },
+    {
+      "state_code": "KA",
+      "state_name": "Karnataka",
+      "portal_name": "Bhoomi / Dishaank",
+      "revenue_url": "https://landrecords.karnataka.gov.in",
+      "registration_portal": "Kaveri Online Services",
+      "registration_url": "https://kaverionline.karnataka.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Bengaluru Urban", "Bengaluru Rural", "Mysuru", "Dakshina Kannada"]
+    },
+    {
+      "state_code": "MH",
+      "state_name": "Maharashtra",
+      "portal_name": "MahaBhumi / Mahabhunaksha (7/12 & 8A)",
+      "revenue_url": "https://mahabhumi.gov.in",
+      "registration_portal": "iSARITA (IGR Maharashtra)",
+      "registration_url": "https://igrmaharashtra.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Mumbai Suburban", "Pune", "Thane", "Nagpur", "Nashik"]
+    },
+    {
+      "state_code": "AP",
+      "state_name": "Andhra Pradesh",
+      "portal_name": "MeeBhoomi (Adangal & 1B)",
+      "revenue_url": "https://meebhoomi.ap.gov.in",
+      "registration_portal": "CARD (Registration & Stamps AP)",
+      "registration_url": "https://registration.ap.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Visakhapatnam", "Krishna", "Guntur", "Chittoor"]
+    },
+    {
+      "state_code": "TS",
+      "state_name": "Telangana",
+      "portal_name": "Dharani Portal",
+      "revenue_url": "https://dharani.telangana.gov.in",
+      "registration_portal": "Dharani Integrated Land Record",
+      "registration_url": "https://dharani.telangana.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Hyderabad", "Ranga Reddy", "Medchal-Malkajgiri", "Sangareddy"]
+    },
+    {
+      "state_code": "GJ",
+      "state_name": "Gujarat",
+      "portal_name": "AnyROR @ Anywhere (VF-7/12 & VF-8A)",
+      "revenue_url": "https://anyror.gujarat.gov.in",
+      "registration_portal": "gARVI (Inspector General of Registration)",
+      "registration_url": "https://garvi.gujarat.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Ahmedabad", "Surat", "Vadodara", "Rajkot"]
+    },
+    {
+      "state_code": "RJ",
+      "state_name": "Rajasthan",
+      "portal_name": "Apna Khata / E-Dharti (Jamabandi)",
+      "revenue_url": "https://apnakhata.rajasthan.gov.in",
+      "registration_portal": "E-Panjiyan Rajasthan",
+      "registration_url": "https://epanjiyan.rajasthan.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Jaipur", "Jodhpur", "Udaipur", "Kota"]
+    },
+    {
+      "state_code": "UP",
+      "state_name": "Uttar Pradesh",
+      "portal_name": "UP Bhulekh / BhuNaksha",
+      "revenue_url": "https://upbhulekh.gov.in",
+      "registration_portal": "IGRSUP (Prerna)",
+      "registration_url": "https://igrsup.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Gautam Buddha Nagar (Noida)", "Lucknow", "Ghaziabad", "Kanpur"]
+    },
+    {
+      "state_code": "WB",
+      "state_name": "West Bengal",
+      "portal_name": "Banglarbhumi (ROR & Khatian)",
+      "revenue_url": "https://banglarbhumi.gov.in",
+      "registration_portal": "WBREGI (Directorate of Registration)",
+      "registration_url": "https://wbregistration.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Kolkata", "North 24 Parganas", "South 24 Parganas", "Howrah"]
+    },
+    {
+      "state_code": "KL",
+      "state_name": "Kerala",
+      "portal_name": "E-Rekha (Survey Records & Resurvey)",
+      "revenue_url": "https://erekha.kerala.gov.in",
+      "registration_portal": "PEARL (Registration Department Kerala)",
+      "registration_url": "https://keralaregistration.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": ["Ernakulam (Kochi)", "Thiruvananthapuram", "Kozhikode"]
+    }
+  ]
+}

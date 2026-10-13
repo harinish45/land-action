@@ -1,0 +1,32 @@
+{
+  "name": "landaction",
+  "version": "1.0.0",
+  "description": "LandAction - Open Land Intelligence Platform for Tamil Nadu (Free Replica of LandLens) with MCP Server and Google Maps Extension",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "mcp": "node mcp-server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "land-intelligence",
+    "tamil-nadu",
+    "land-records",
+    "mcp-server",
+    "real-estate",
+    "patta",
+    "encumbrance-certificate",
+    "tncdbr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harinish45/land-action.git"
+  },
+  "author": "LandAction Open Community",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

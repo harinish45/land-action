@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "LandAction for Google Maps & Earth",
+  "version": "1.0.0",
+  "description": "Tamil Nadu land records on Google Maps and Google Earth: survey boundaries over the map, survey record, owners and 13 instant land checks. 100% Free.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.google.com/maps*",
+    "*://earth.google.com/*",
+    "http://localhost:3000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LandAction Land Intelligence"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/maps*",
+        "*://earth.google.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

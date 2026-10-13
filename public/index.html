@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandAction — Autonomous Land Intelligence, Cadastral Maps & Due Diligence for Tamil Nadu</title>
+  <meta name="description" content="LandAction is the complete, 100% free replica of LandLens. Verify land in Tamil Nadu across 33 spatial layers, 123 mini tools, 25-yr PriceMap, TNCDBR BuildScope, 50-yr Legal Opinion, and MCP server.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Global Header -->
+  <header class="app-header">
+    <div class="wrap header-inner">
+      <div class="logo-area">
+        <a href="#sec-onemap" class="brand-logo">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Land<span class="hl">Action</span></span>
+        </a>
+        <span class="badge-free">100% Free • 0 Credits</span>
+      </div>
+
+      <div class="global-search-wrapper">
+        <div class="search-input-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="global-search-input" placeholder="Search Survey No. (e.g. 112/5, 163/2), Village, or Taluk..." autocomplete="off">
+        </div>
+        <div id="global-search-results" class="search-dropdown"></div>
+      </div>
+
+      <div class="header-right">
+        <a href="#sec-mcp" class="btn btn-sm btn-outline nav-tab-btn" data-target="sec-mcp">
+          <span class="mcp-indicator"></span> MCP Server Active
+        </a>
+        <a href="#sec-extension" class="btn btn-sm btn-primary nav-tab-btn" data-target="sec-extension">
+          Chrome Extension
+        </a>
+      </div>
+    </div>
+
+    <!-- Product Subnav Bar -->
+    <nav class="product-subnav">
+      <div class="wrap subnav-inner">
+        <button class="nav-tab-btn active" data-target="sec-onemap">One Map (33 Layers)</button>
+        <button class="nav-tab-btn" data-target="sec-veritas">Veritas AI</button>
+        <button class="nav-tab-btn" data-target="sec-minis">123 Minis (Free)</button>
+        <button class="nav-tab-btn" data-target="sec-verifymyland">Verify My Land</button>
+        <button class="nav-tab-btn" data-target="sec-pricemap">PriceMap (25-Yr)</button>
+        <button class="nav-tab-btn" data-target="sec-buildscope">Build Scope (TNCDBR)</button>
+        <button class="nav-tab-btn" data-target="sec-legal">Legal Opinion</button>
+        <button class="nav-tab-btn" data-target="sec-tracker">Property Tracker</button>
+        <button class="nav-tab-btn" data-target="sec-dealroom">Deal Room</button>
+        <button class="nav-tab-btn" data-target="sec-mcp">MCP / API</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    
+    <!-- Hero Banner -->
+    <section class="hero-strip wrap">
+      <div class="hero-chip">
+        <span class="chip-star">★</span> Full LandLens Parity • 100% Open & Free • Powered by Tamil Nadu Revenue & Spatial GIS
+      </div>
+      <h1 class="hero-heading">Autonomous Cadastral Intelligence & <span class="hl">Land Due Diligence</span></h1>
+      <p class="hero-desc">The open alternative to LandLens. Screen any land parcel in Tamil Nadu across 33 statutory spatial layers, 123 instant calculators, 25-year registered sales, TNCDBR 2019 building feasibility, and AI agent integration via Model Context Protocol (MCP).</p>
+      
+      <div class="hero-actions">
+        <button class="btn btn-lg btn-primary nav-tab-btn" data-target="sec-verifymyland">Verify Survey No 112/5 (33 Checks)</button>
+        <button class="btn btn-lg btn-outline nav-tab-btn" data-target="sec-onemap">Explore One Map Layers</button>
+        <button class="btn btn-lg btn-ghost nav-tab-btn" data-target="sec-mcp">Connect Claude / Cursor (MCP)</button>
+      </div>
+    </section>
+
+    <!-- PRODUCT 1: ONE MAP -->
+    <section id="sec-onemap" class="app-section active">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 1 of 9</span>
+            <h2>LandAction One: 33-Layer Cadastral Spatial GIS</h2>
+            <p>Interactive spatial screening across 7 statutory risk groups: Water bodies, Coastal zones, Heritage, Transport, Planning, High-Risk zones, and Utilities.</p>
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-sm btn-outline" id="onemap-reset-layers">Reset Layers</button>
+          </div>
+        </div>
+
+        <div class="onemap-layout">
+          <!-- Left: 33 Layers Filter Panel -->
+          <aside class="onemap-layers-panel">
+            <div class="layers-header">
+              <h4>Statutory Spatial Layers (33)</h4>
+              <span class="badge badge-neutral" id="active-layers-count">33 Active</span>
+            </div>
+            
+            <div class="layers-accordion">
+              <!-- Water Group (5) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-water" checked>
+                    <strong>Water & Flood Bodies</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info" id="water-count">5 layers</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• Lakes, Tanks & Ponds (Eri / Kulam)</div>
+                  <div class="layer-sub-item">• River & Canal Buffers (15m/50m)</div>
+                  <div class="layer-sub-item">• Primary Stormwater Drains (SWD)</div>
+                  <div class="layer-sub-item">• Pallikaranai Marsh & Wetlands</div>
+                  <div class="layer-sub-item">• 100-Year Flood Inundation Hazard</div>
+                </div>
+              </div>
+
+              <!-- Coastal Group (3) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-crz" checked>
+                    <strong>CRZ Coastal Regulation</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info">3 layers</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• CRZ-I (Ecologically Sensitive)</div>
+                  <div class="layer-sub-item">• CRZ-II (Urban Coastal Built-Up)</div>
+                  <div class="layer-sub-item">• High Tide Line (HTL 200m/500m)</div>
+                </div>
+              </div>
+
+              <!-- Heritage & Religious (5) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-heritage" checked>
+                    <strong>Heritage, ASI & HR&CE</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info">5 layers</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• ASI Prohibited Zone (100m)</div>
+                  <div class="layer-sub-item">• ASI Regulated Zone (200m)</div>
+                  <div class="layer-sub-item">• HR&CE Temple Lands Register</div>
+                  <div class="layer-sub-item">• Wakf Board Properties</div>
+                  <div class="layer-sub-item">• Listed Heritage Structures</div>
+                </div>
+              </div>
+
+              <!-- Transport Group (4) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-transport" checked>
+                    <strong>Transport Corridors</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info">4 layers</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• Chennai Metro Phase 2 Corridors</div>
+                  <div class="layer-sub-item">• National Highways (NHAI 40m/60m)</div>
+                  <div class="layer-sub-item">• Southern Railway Track Setback (30m)</div>
+                  <div class="layer-sub-item">• AAI Airport Obstacle Limitation (OLS)</div>
+                </div>
+              </div>
+
+              <!-- Planning Group (10) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-planning" checked>
+                    <strong>CMDA Master Plan & Land Use</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info">10 layers</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• Primary Residential Zone</div>
+                  <div class="layer-sub-item">• Mixed Residential Zone</div>
+                  <div class="layer-sub-item">• Commercial Zone</div>
+                  <div class="layer-sub-item">• Institutional Zone</div>
+                  <div class="layer-sub-item">• Agricultural / Non-Urban Zone</div>
+                  <div class="layer-sub-item">• Proposed 200ft / 150ft Outer Ring Roads</div>
+                  <div class="layer-sub-item">• Open Space Reservation (OSR)</div>
+                </div>
+              </div>
+
+              <!-- Risk & Protected (5) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-risk" checked>
+                    <strong>Restricted & Risk Zones</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info">5 layers</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• Stone Quarry Safety Buffer (300m)</div>
+                  <div class="layer-sub-item">• Forest & Wildlife Sanctuary Buffer</div>
+                  <div class="layer-sub-item">• Defense Installation Buffer (500m)</div>
+                  <div class="layer-sub-item">• Thermal Power / Heavy Industrial</div>
+                  <div class="layer-sub-item">• Solid Waste Landfill Buffer (500m)</div>
+                </div>
+              </div>
+
+              <!-- Utilities (1) -->
+              <div class="layer-group-card">
+                <div class="layer-group-title">
+                  <label class="layer-check-label">
+                    <input type="checkbox" id="layer-utilities" checked>
+                    <strong>High Tension Powerlines (TANGEDCO)</strong>
+                  </label>
+                  <span class="badge badge-xs badge-info">1 layer</span>
+                </div>
+                <div class="layer-item-list">
+                  <div class="layer-sub-item">• 230kV / 400kV HT Corridor Buffer</div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Center/Right: Interactive Cadastral Map Viewport & Parcel Inspector -->
+          <div class="onemap-viewport-container">
+            <div class="viewport-toolbar">
+              <div class="map-status">
+                <span class="live-dot"></span>
+                <span>Spatial Reference: WGS 84 / UTM Zone 44N (Tamil Nadu)</span>
+              </div>
+              <div class="parcel-selector-strip">
+                <label>Select Sample Parcel:</label>
+                <select id="onemap-parcel-quickselect" class="form-select-sm">
+                  <option value="112/5">S.No 112/5 - Karapakkam, OMR (Chennai)</option>
+                  <option value="163/2">S.No 163/2 - Tambaram, GST Road (Chengalpattu)</option>
+                  <option value="42/2">S.No 42/2 - Siruseri SIPCOT (Chengalpattu)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- SVG Map Canvas -->
+            <div class="cadastral-map-canvas" id="cadastral-map-wrapper">
+              <svg id="cadastral-svg" viewBox="0 0 900 520" preserveAspectRatio="xMidYMid meet"></svg>
+              
+              <!-- Map Legend Overlay -->
+              <div class="map-legend-overlay">
+                <div class="legend-title">Statutory Map Legend</div>
+                <div class="legend-item"><span class="legend-color legend-parcel"></span> Selected Parcel</div>
+                <div class="legend-item"><span class="legend-color legend-water"></span> Waterbody Buffer</div>
+                <div class="legend-item"><span class="legend-color legend-road"></span> Master Plan Road Corridor</div>
+                <div class="legend-item"><span class="legend-color legend-ht"></span> High Tension Corridor</div>
+                <div class="legend-item"><span class="legend-color legend-crz"></span> Coastal Zone Boundary</div>
+              </div>
+            </div>
+
+            <!-- Parcel Dynamic Assessment Inspector Card -->
+            <div id="onemap-parcel-info" class="parcel-inspector-card"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 2: VERITAS AI CHATBOT -->
+    <section id="sec-veritas" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 2 of 9</span>
+            <h2>Veritas AI: Real Estate & Legal Due Diligence Intelligence</h2>
+            <p>Direct chat assistant trained on Tamil Nadu Land Laws, CMDA Master Plans, TNCDBR 2019, Registration Department guidelines, and RERA court judgments.</p>
+          </div>
+          <div class="ai-status">
+            <span class="badge badge-success"><span class="live-dot"></span> Model Ready</span>
+          </div>
+        </div>
+
+        <div class="chat-container-card">
+          <!-- Quick Prompt Suggestions -->
+          <div class="chat-prompt-chips">
+            <span class="chat-chip-label">Quick Inquiries:</span>
+            <button class="chat-quick-prompt">Can I build Stilt + 5 floors on a 30 ft road in Karapakkam?</button>
+            <button class="chat-quick-prompt">Calculate stamp duty and registration fee for 1.5 Crores in Chennai</button>
+            <button class="chat-quick-prompt">What is the 25-yr guideline history for S.No 112/5?</button>
+            <button class="chat-quick-prompt">What are the 33 statutory spatial checks for coastal land?</button>
+          </div>
+
+          <!-- Chat Messages Scroll Container -->
+          <div id="chat-messages-container" class="chat-messages-area">
+            <div class="chat-bubble assistant">
+              <div class="bubble-header">
+                <span class="bubble-avatar">🛡️</span>
+                <span class="bubble-name font-mono">Veritas AI</span>
+                <span class="bubble-time">Live</span>
+              </div>
+              <div class="bubble-content">
+                Welcome to <strong>LandAction Veritas AI</strong>. I have indexed all 38 districts of Tamil Nadu, TNCDBR 2019 building regulations, 25-year guideline value records from IGR, CMDA & DTCP zoning master plans, and all 33 statutory spatial risk layers.<br/><br/>
+                Ask me any question regarding land legality, permissible FSI, stamp duties, guideline valuation, parent deed chains, or spatial constraints.
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input Bar -->
+          <div class="chat-input-bar">
+            <input type="text" id="chat-input-text" placeholder="Ask Veritas: e.g. 'Explain TNCDBR Rule 35 setback requirements for 12m road'..." autocomplete="off">
+            <button id="chat-send-btn" class="btn btn-primary">
+              <span>Send</span> ➔
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 3: 123 MINIS TOOLS -->
+    <section id="sec-minis" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 3 of 9</span>
+            <h2>LandAction Minis: 123 Specialized Land Intelligence Tools</h2>
+            <p>One question, instant answer. Complete catalog unlocked 100% free with zero credit restrictions.</p>
+          </div>
+          <div>
+            <span class="badge badge-success" id="minis-count-badge">123 Tools Free</span>
+          </div>
+        </div>
+
+        <!-- Filter and Search Toolbar -->
+        <div class="minis-toolbar">
+          <div class="minis-search-box">
+            <span>🔎</span>
+            <input type="text" id="minis-search-input" placeholder="Search 123 tools by title, keyword, law, or calculation...">
+          </div>
+          <div class="minis-cat-tabs" id="minis-category-filters">
+            <!-- Injected by minis.js -->
+          </div>
+        </div>
+
+        <!-- Interactive Runner Card (when user clicks an interactive tool) -->
+        <div id="mini-calc-runner" class="mini-runner-card"></div>
+
+        <!-- Tools Grid -->
+        <div id="minis-grid" class="minis-catalog-grid"></div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 4: VERIFY MY LAND (33 AUTOMATED CHECKS) -->
+    <section id="sec-verifymyland" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 4 of 9</span>
+            <h2>Verify My Land: 33-Point Automated Due Diligence Engine</h2>
+            <p>Instant title verification, Tamil Nilam revenue cross-examination, spatial hazard screening, and statutory clearance report.</p>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-outline" onclick="window.print()">🖨️ Print Due Diligence Sheet</button>
+          </div>
+        </div>
+
+        <!-- Parcel Input Card -->
+        <div class="verify-input-card">
+          <div class="verify-input-grid">
+            <div class="input-col">
+              <label>Survey Number / Sub-Division</label>
+              <input type="text" id="verify-input-survey" value="112/5" placeholder="e.g. 112/5, 163/2">
+            </div>
+            <div class="input-col">
+              <label>Taluk</label>
+              <input type="text" id="verify-input-taluk" value="Sholinganallur" placeholder="e.g. Sholinganallur, Tambaram">
+            </div>
+            <div class="input-col">
+              <label>District</label>
+              <input type="text" id="verify-input-district" value="Chennai" placeholder="e.g. Chennai, Chengalpattu">
+            </div>
+            <div class="input-col btn-col">
+              <button id="verify-run-btn" class="btn btn-primary btn-block">Run 33 Checks ➔</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="verify-results-container"></div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 5: PRICEMAP (25-YEAR REGISTERED PRICES) -->
+    <section id="sec-pricemap" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 5 of 9</span>
+            <h2>PriceMap: 25-Year Registered Deeds & Guideline Value Curves</h2>
+            <p>Continuous tariff history from 2002 to 2026, real SRO transaction deeds, CAGR appreciation analysis, and acquisition outlay calculator.</p>
+          </div>
+          <div>
+            <select id="pricemap-parcel-select" class="form-select-sm"></select>
+          </div>
+        </div>
+
+        <!-- 4-Stat Overview Cards -->
+        <div id="pricemap-stats" class="stats-four-grid"></div>
+
+        <!-- SVG 25-Year Valuation Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h4>25-Year Appreciation Trend: Government Guideline vs Actual SRO Transactions</h4>
+            <div class="chart-legend">
+              <span><span class="legend-dot" style="background: #ff6725;"></span> Guideline Tariff (IGR TN)</span>
+              <span><span class="legend-dot" style="background: #10b981;"></span> SRO Registered Deeds</span>
+            </div>
+          </div>
+          <div class="chart-canvas-box">
+            <svg id="pricemap-chart-svg" class="price-chart-svg"></svg>
+          </div>
+        </div>
+
+        <!-- Two Column: Registered Deeds Table vs Outlay Calculator -->
+        <div class="pricemap-split-grid">
+          <div class="tx-table-card">
+            <h4>Recent Registered Deeds at Sub-Registrar Office</h4>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Doc No & Date</th>
+                    <th>Deed Type</th>
+                    <th>Extent</th>
+                    <th>Consideration</th>
+                    <th>Rate / sqft</th>
+                    <th>Parties</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="pricemap-tx-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="outlay-calc-card">
+            <h4>Acquisition Outlay & Duties Calculator</h4>
+            <div class="calc-form">
+              <div class="form-group">
+                <label>Plot Extent (sq.ft)</label>
+                <input type="number" id="pricemap-calc-area" value="2400" min="100">
+              </div>
+              <div class="form-group">
+                <label>Road Frontage Category</label>
+                <select id="pricemap-calc-road">
+                  <option value="1.0">Standard Residential Road (1.0x)</option>
+                  <option value="1.15">Commercial Main Road (+15%)</option>
+                  <option value="1.30">National / State Highway (+30%)</option>
+                </select>
+              </div>
+              <button id="pricemap-calc-btn" class="btn btn-primary btn-block">Compute Total Acquisition Outlay</button>
+            </div>
+            <div id="pricemap-calc-result" class="mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 6: BUILD SCOPE (TNCDBR 2019 CALCULATOR) -->
+    <section id="sec-buildscope" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 6 of 9</span>
+            <h2>Build Scope: TNCDBR 2019 Feasibility & Development Potential</h2>
+            <p>Compute maximum Built-Up Area (BUA), permissible FSI, setbacks, floor height limits, and statutory parking quotas under Tamil Nadu Combined Development and Building Rules 2019.</p>
+          </div>
+          <div>
+            <button id="bs-reset-btn" class="btn btn-sm btn-outline">Reset Parameters</button>
+          </div>
+        </div>
+
+        <div class="buildscope-layout">
+          <!-- Input Form Sidebar -->
+          <div class="scope-form-card">
+            <h4>Plot & Road Parameters</h4>
+            <div class="form-group">
+              <label>Plot Extent</label>
+              <div class="input-group">
+                <input type="number" id="bs-plot-area" value="4800">
+                <select id="bs-plot-unit">
+                  <option value="sqft">Sq. Ft</option>
+                  <option value="ground">Grounds (2,400 sqft)</option>
+                  <option value="cents">Cents (435.6 sqft)</option>
+                  <option value="sqm">Sq. Meters</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Abutting Road Width (Meters)</label>
+              <select id="bs-road-width">
+                <option value="6.0">Under 7.2m (20 ft) - Low Density</option>
+                <option value="7.2">7.2m (24 ft) - Basic FSI 1.75</option>
+                <option value="9.0">9.0m (30 ft) - FSI 2.00</option>
+                <option value="12.0" selected>12.0m (40 ft) - Stilt + 5 Floors (18.3m)</option>
+                <option value="18.0">18.0m (60 ft) - High Rise Building (HRB)</option>
+                <option value="24.0">24.0m (80 ft) - Commercial Corridor</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Proposed Building Category</label>
+              <select id="bs-building-type">
+                <option value="residential" selected>Residential Apartment / Group Housing</option>
+                <option value="commercial">Commercial Office / Retail</option>
+                <option value="mixed">Mixed-Use (Commercial Ground + Residential)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Plot Frontage Width (Meters)</label>
+              <input type="number" id="bs-plot-frontage" value="15" min="3">
+            </div>
+
+            <div class="form-checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" id="bs-premium-fsi" checked>
+                <span>Opt-in Premium FSI (Rule 37 - 50% guideline surcharge)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dynamic Output Display -->
+          <div class="scope-output-card" id="bs-results"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 7: LEGAL OPINION (50-YEAR TITLE ASSESSMENT) -->
+    <section id="sec-legal" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 7 of 9</span>
+            <h2>Legal Opinion: Automated 50-Year Title Due Diligence</h2>
+            <p>Advocate scrutiny report, continuous deed chain from 1975 to 2026, encumbrance discharge vetting, and Madras High Court search.</p>
+          </div>
+          <div class="opinion-controls">
+            <select id="legal-parcel-select" class="form-select-sm"></select>
+            <button id="legal-print-btn" class="btn btn-sm btn-primary">🖨️ Export Advocate Certificate</button>
+          </div>
+        </div>
+
+        <div id="legal-opinion-content"></div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 8: PROPERTY TRACKER (24/7 MONITORING) -->
+    <section id="sec-tracker" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 8 of 9</span>
+            <h2>Property Tracker: 24/7 Cadastral Mutation & Encumbrance Radar</h2>
+            <p>Continuous monitoring for unauthorized SRO deeds, Tamil Nilam patta mutation attempts, court attachments, and guideline revisions.</p>
+          </div>
+          <div>
+            <button id="tracker-simulate-btn" class="btn btn-sm btn-outline">🚨 Simulate Live Mutation Alert</button>
+          </div>
+        </div>
+
+        <div class="tracker-layout">
+          <!-- Left: Add parcel to watch -->
+          <div class="tracker-form-card">
+            <h4>Add Parcel to 24/7 Radar</h4>
+            <div class="form-group">
+              <label>Survey Number</label>
+              <input type="text" id="trk-input-survey" placeholder="e.g. 112/5">
+            </div>
+            <div class="form-group">
+              <label>Revenue Village</label>
+              <input type="text" id="trk-input-village" value="Karapakkam">
+            </div>
+            <div class="form-group">
+              <label>District</label>
+              <input type="text" id="trk-input-district" value="Chennai">
+            </div>
+            <div class="form-group">
+              <label>Alert Delivery Channel</label>
+              <select id="trk-input-channel">
+                <option value="WhatsApp (+91 98*** ***10)">WhatsApp Instant Alert</option>
+                <option value="Email & SMS">Email + SMS</option>
+                <option value="Webhook / API">Custom Webhook Endpoint</option>
+              </select>
+            </div>
+            <button id="tracker-add-btn" class="btn btn-primary btn-block">+ Start 24/7 Monitoring</button>
+          </div>
+
+          <!-- Center: Active monitored parcels -->
+          <div class="tracker-list-card">
+            <h4>Monitored Cadastral Parcels</h4>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Parcel</th>
+                    <th>Status</th>
+                    <th>Last Checked</th>
+                    <th>Alerts</th>
+                    <th>Channel</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="tracker-list-tbody"></tbody>
+              </table>
+            </div>
+
+            <!-- Real-Time Activity Feed -->
+            <div class="mt-4">
+              <h4>Live Cadastral Telemetry Stream</h4>
+              <div id="tracker-feed-container" class="feed-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT 9: DEAL ROOM (TRANSACTION WORKSPACE) -->
+    <section id="sec-dealroom" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Product 9 of 9</span>
+            <h2>Deal Room: Collaborative Real Estate Acquisition Workspace</h2>
+            <p>Multi-party milestone coordination between Buyer, Seller, Advocate, Surveyor, and Escrow Bank with encrypted document vault.</p>
+          </div>
+          <div>
+            <input type="file" id="dealroom-file-input" style="display: none;">
+            <button class="btn btn-sm btn-primary" id="dealroom-upload-btn">+ Add Title Document</button>
+          </div>
+        </div>
+
+        <div id="dealroom-content"></div>
+      </div>
+    </section>
+
+    <!-- MCP SERVER & DEVELOPER API HUB -->
+    <section id="sec-mcp" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Model Context Protocol</span>
+            <h2>LandAction MCP Server: AI Agent Integration Hub</h2>
+            <p>Connect Claude Desktop, Cursor, Claude Code, Windsurf, or custom LLM agents directly to LandAction via standard JSON-RPC 2.0 and SSE.</p>
+          </div>
+          <div>
+            <span id="mcp-latency-badge" class="badge badge-success">HTTP & Stdio Transports Active</span>
+          </div>
+        </div>
+
+        <!-- MCP Playground -->
+        <div class="mcp-grid">
+          <!-- Left: In-Browser Tool Tester -->
+          <div class="mcp-tester-card">
+            <h4><span class="icon">⚡</span> Interactive MCP Tool Execution</h4>
+            <div class="form-group">
+              <label>Select Tool:</label>
+              <select id="mcp-tool-select"></select>
+            </div>
+            <div class="form-group">
+              <label>JSON Arguments (`params.arguments`):</label>
+              <textarea id="mcp-args-input" rows="5" class="font-mono text-xs"></textarea>
+            </div>
+            <button id="mcp-execute-btn" class="btn btn-primary btn-block">Execute MCP Tool ➔</button>
+
+            <div class="mt-4">
+              <label>JSON-RPC 2.0 Response:</label>
+              <pre id="mcp-result-output" class="mcp-code-output">Select a tool and click 'Execute MCP Tool' to test live response.</pre>
+            </div>
+          </div>
+
+          <!-- Right: Client Configuration Snippets -->
+          <div class="mcp-config-card">
+            <h4><span class="icon">🔌</span> Quick Client Setup</h4>
+            <div class="mcp-client-tabs">
+              <button class="mcp-client-tab active" data-target="claude">Claude Desktop</button>
+              <button class="mcp-client-tab" data-target="cursor">Cursor IDE</button>
+              <button class="mcp-client-tab" data-target="claudecode">Claude Code</button>
+              <button class="mcp-client-tab" data-target="curl">cURL</button>
+            </div>
+
+            <div class="snippet-box">
+              <pre id="mcp-config-snippet" class="mcp-code-snippet"></pre>
+            </div>
+
+            <div class="mcp-features-list">
+              <div class="mf-item">
+                <strong>Stdio Transport:</strong> <code>node c:/Documents/Projects/LAND ACTION/mcp-server.js</code>
+              </div>
+              <div class="mf-item">
+                <strong>HTTP POST:</strong> <code>http://localhost:3000/mcp</code> (Standard JSON-RPC 2.0)
+              </div>
+              <div class="mf-item">
+                <strong>SSE Streaming:</strong> <code>http://localhost:3000/mcp/sse</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHROME EXTENSION SECTION -->
+    <section id="sec-extension" class="app-section">
+      <div class="wrap">
+        <div class="section-title-strip">
+          <div>
+            <span class="badge badge-primary">Browser Extension</span>
+            <h2>LandAction Cadastral Extension for Google Maps & Earth</h2>
+            <p>Inspect cadastral survey boundaries, guideline values, and waterbody buffers directly while browsing Google Maps and Google Earth Web.</p>
+          </div>
+          <div>
+            <a href="/api/v1/extension/download" class="btn btn-primary" download="landaction-extension.zip">
+              ⬇️ Download Extension Package
+            </a>
+          </div>
+        </div>
+
+        <div class="ext-showcase-grid">
+          <div class="ext-card">
+            <h4>How to Install in Chrome, Brave, or Edge (2 Minutes)</h4>
+            <ol class="step-list">
+              <li>Open your Chromium browser and go to <code>chrome://extensions</code></li>
+              <li>Toggle the <strong>Developer mode</strong> switch in the top-right corner.</li>
+              <li>Click <strong>Load unpacked</strong> button.</li>
+              <li>Select the folder: <code>c:\Documents\Projects\LAND ACTION\chrome-extension</code></li>
+              <li>Open <a href="https://maps.google.com" target="_blank" class="text-brand">Google Maps</a> — the LandAction Cadastral HUD will automatically appear on your screen!</li>
+            </ol>
+          </div>
+
+          <div class="ext-card">
+            <h4>Extension Highlights</h4>
+            <ul class="feature-bullets">
+              <li><strong>Floating Cadastral HUD:</strong> Shows current latitude, longitude, and identified Tamil Nadu Revenue Village in real time.</li>
+              <li><strong>Side Drawer Inspector:</strong> View survey number, guideline value, and ownership status for any location you click on Google Maps.</li>
+              <li><strong>One-Click Due Diligence:</strong> Jump straight from Google Maps into LandAction's 33 automated checks with survey coordinates pre-filled.</li>
+              <li><strong>Zero Cloud Tracking:</strong> Operates entirely client-side against local spatial datasets.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="app-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="logo-icon">🛡️</span>
+          <span>Land<strong>Action</strong></span>
+        </div>
+        <p>The open-source, 100% free cadastral intelligence and title verification platform for Tamil Nadu, India. Reverse engineered from LandLens with zero credit limits.</p>
+      </div>
+      <div class="footer-meta font-mono text-xs">
+        <div>Platform: Node.js • Express • Model Context Protocol</div>
+        <div>Jurisdiction: Tamil Nadu (Registration Dept & CMDA)</div>
+        <div>All 123 Minis & 33 Spatial Layers Unlocked Free</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Scripts -->
+  <script src="/js/onemap.js"></script>
+  <script src="/js/minis.js"></script>
+  <script src="/js/verifymyland.js"></script>
+  <script src="/js/pricemap.js"></script>
+  <script src="/js/buildscope.js"></script>
+  <script src="/js/legalopinion.js"></script>
+  <script src="/js/tracker.js"></script>
+  <script src="/js/dealroom.js"></script>
+  <script src="/js/mcp-tester.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LandAction Extension</title>
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .logo {
+      background: #ff6725;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 16px;
+    }
+    p {
+      margin: 2px 0 0;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .status-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .badge {
+      background: #10b981;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .input-group {
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      color: #cbd5e1;
+      margin-bottom: 4px;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      background: #0f172a;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      padding: 8px 10px;
+      color: #fff;
+      font-size: 12px;
+    }
+    button {
+      width: 100%;
+      background: #ff6725;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #ea580c;
+    }
+    .footer-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">LA</div>
+    <div>
+      <h2>LandAction</h2>
+      <p>Google Maps & Earth Cadastral Inspector</p>
+    </div>
+  </div>
+
+  <div class="status-card">
+    <div class="status-row">
+      <span>Cadastral Sync:</span>
+      <span class="badge">ACTIVE</span>
+    </div>
+    <div class="status-row">
+      <span>Pricing Tier:</span>
+      <b style="color: #10b981;">100% Free / 0 Credits</b>
+    </div>
+    <div class="status-row" style="margin-bottom: 0;">
+      <span>Coverage:</span>
+      <span>All Tamil Nadu</span>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <label for="survey-input">Direct Survey Search:</label>
+    <input type="text" id="survey-input" placeholder="e.g. 112/5 Karapakkam" value="112/5">
+  </div>
+
+  <button id="open-app-btn">Inspect on LandAction</button>
+  <a href="http://localhost:3000" target="_blank" class="footer-link">Open Full LandAction Web Suite &rarr;</a>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+{
+  "districts": [
+    { "code": "CH", "name": "Chennai", "name_ta": "சென்னை", "taluks": ["Sholinganallur", "Guindy", "Mylapore", "Velachery", "Egmore", "T. Nagar", "Mambalam", "Aminjikarai"] },
+    { "code": "CP", "name": "Chengalpattu", "name_ta": "செங்கல்பட்டு", "taluks": ["Tambaram", "Vandalur", "Pallavaram", "Thiruporur", "Chengalpattu"] },
+    { "code": "KC", "name": "Kanchipuram", "name_ta": "காஞ்சிபுரம்", "taluks": ["Sriperumbudur", "Kanchipuram", "Kundrathur", "Walajabad"] },
+    { "code": "TL", "name": "Thiruvallur", "name_ta": "திருவள்ளூர்", "taluks": ["Ambattur", "Ponneri", "Avadi", "Poonamallee", "Thiruvallur"] },
+    { "code": "CB", "name": "Coimbatore", "name_ta": "கோயம்புத்தூர்", "taluks": ["Coimbatore North", "Coimbatore South", "Sulur", "Pollachi"] }
+  ],
+  "sro_directory": [
+    { "sro_code": "SRO-NLK", "name": "Neelankarai SRO", "zone": "South Chennai", "district": "Chennai", "address": "East Coast Road, Neelankarai, Chennai 600115", "jurisdiction": ["Sholinganallur", "Karapakkam", "Injambakkam", "Neelankarai", "Akkarai", "Palavakkam"] },
+    { "sro_code": "SRO-VEL", "name": "Velachery SRO", "zone": "South Chennai", "district": "Chennai", "address": "100 Feet Bypass Road, Velachery, Chennai 600042", "jurisdiction": ["Velachery", "Madipakkam", "Pallikaranai", "Thoraipakkam"] },
+    { "sro_code": "SRO-SAI", "name": "Saidapet SRO", "zone": "South Chennai", "district": "Chennai", "address": "Jeonis Road, Saidapet, Chennai 600015", "jurisdiction": ["Guindy", "T. Nagar", "Saidapet", "Mambalam", "Kotturpuram"] },
+    { "sro_code": "SRO-TAM", "name": "Tambaram SRO", "zone": "Chengalpattu", "district": "Chengalpattu", "address": "GST Road, West Tambaram, Chennai 600045", "jurisdiction": ["Tambaram", "Chromepet", "Mudichur", "Perungalathur", "Selaiyur"] },
+    { "sro_code": "SRO-TPR", "name": "Thiruporur SRO", "zone": "Chengalpattu", "district": "Chengalpattu", "address": "OMR Highway, Thiruporur 603110", "jurisdiction": ["Siruseri", "Navalur", "Kelambakkam", "Thiruporur", "Padur"] }
+  ],
+  "sample_parcels": [
+    {
+      "survey_number": "112/5",
+      "old_survey": "84/A",
+      "district": "Chennai",
+      "taluk": "Sholinganallur",
+      "village": "Karapakkam",
+      "village_code": "V-SHL-04",
+      "sro": "Neelankarai SRO",
+      "lat": 12.9142,
+      "lng": 80.2285,
+      "extent": "0.48 Acres (20,908 sq.ft / 8.71 Grounds)",
+      "classification": "Ryotwari Nanjai (Wet Land)",
+      "classification_ta": "ரயத்துவாரி நஞ்சை",
+      "patta_number": "P-4821",
+      "ulpin": "TN-CH-SHL-04-112-005",
+      "owners": [
+        { "name": "Ramanathan K", "name_ta": "ராமநாதன் கே", "share": "100%", "relation": "S/o Krishnamoorthy", "address": "No. 14, Gandhi Nagar 2nd Main Rd, Karapakkam, Chennai" }
+      ],
+      "guideline_value": {
+        "current_rate_sqft": 4850,
+        "current_rate_ground": 11640000,
+        "classification_igr": "Commercial Road Facing Zone 1",
+        "history": [
+          { "year": 2002, "rate_sqft": 350 },
+          { "year": 2007, "rate_sqft": 900 },
+          { "year": 2012, "rate_sqft": 2400 },
+          { "year": 2017, "rate_sqft": 3600 },
+          { "year": 2020, "rate_sqft": 4100 },
+          { "year": 2024, "rate_sqft": 4650 },
+          { "year": 2026, "rate_sqft": 4850 }
+        ]
+      },
+      "actual_market_data": {
+        "recent_registered_rate": 6480,
+        "sales_count_5yrs": 14,
+        "transactions": [
+          { "year": 2024, "doc_no": "Doc 4182/2024", "type": "Sale Deed", "date": "14-Feb-2024", "area_sqft": 2400, "consideration": 15552000, "rate_sqft": 6480, "buyer": "Anand S", "seller": "Ramanathan K" },
+          { "year": 2021, "doc_no": "Doc 2310/2021", "type": "Receipt (Loan Closed)", "date": "19-Aug-2021", "area_sqft": 20908, "consideration": 0, "rate_sqft": 0, "buyer": "Ramanathan K", "seller": "State Bank of India" },
+          { "year": 2016, "doc_no": "Doc 977/2016", "type": "Mortgage by Deposit of Title Deeds", "date": "10-Nov-2016", "area_sqft": 20908, "consideration": 45000000, "rate_sqft": 0, "buyer": "State Bank of India", "seller": "Ramanathan K" },
+          { "year": 2011, "doc_no": "Doc 1842/2011", "type": "Sale Deed", "date": "05-May-2011", "area_sqft": 20908, "consideration": 41816000, "rate_sqft": 2000, "buyer": "Ramanathan K", "seller": "Thirunavukkarasu M" }
+        ]
+      },
+      "zoning": {
+        "master_plan": "CMDA 2nd Master Plan (Chennai)",
+        "zone_code": "PR-01",
+        "zone_name": "Primary Residential Zone",
+        "permissible_uses": ["Residential apartments", "Villas", "Clinics", "Convenience retail (<100 sqm)"],
+        "fsi_standard": 2.0,
+        "fsi_premium_eligible": true,
+        "fsi_max_achievable": 3.25,
+        "frontage_road_width_m": 18.0,
+        "proposed_road_widening_m": 24.0,
+        "max_height_m": 18.3,
+        "airport_height_cap_m": 45.0,
+        "crz_applicable": false,
+        "crz_distance_m": 1250,
+        "water_body_within_15m": false,
+        "nearest_water_body": "Karapakkam Kulam (140m away)",
+        "temple_land_match": false,
+        "waqf_land_match": false,
+        "forest_reserve_match": false,
+        "cersai_open_charge": false,
+        "court_litigation": []
+      }
+    },
+    {
+      "survey_number": "163/2",
+      "old_survey": "91/2B",
+      "district": "Chennai",
+      "taluk": "Sholinganallur",
+      "village": "Sholinganallur",
+      "village_code": "V-SHL-01",
+      "sro": "Neelankarai SRO",
+      "lat": 12.8984,
+      "lng": 80.2269,
+      "extent": "1.25 Acres (54,450 sq.ft / 22.68 Grounds)",
+      "classification": "Ryotwari Punjai (Dry Land)",
+      "classification_ta": "ரயத்துவாரி புஞ்சை",
+      "patta_number": "P-6091",
+      "ulpin": "TN-CH-SHL-01-163-002",
+      "owners": [
+        { "name": "Meenakshi Sundaram S", "name_ta": "மீனாட்சி சுந்தரம் எஸ்", "share": "50%", "relation": "W/o Sundaram", "address": "Plot 8, OMR Tech Corridor, Sholinganallur" },
+        { "name": "Karthik Sundaram", "name_ta": "கார்த்திக் சுந்தரம்", "share": "50%", "relation": "S/o Sundaram", "address": "Plot 8, OMR Tech Corridor, Sholinganallur" }
+      ],
+      "guideline_value": {
+        "current_rate_sqft": 5200,
+        "current_rate_ground": 12480000,
+        "classification_igr": "Commercial Special Corridor",
+        "history": [
+          { "year": 2002, "rate_sqft": 400 },
+          { "year": 2007, "rate_sqft": 1200 },
+          { "year": 2012, "rate_sqft": 3100 },
+          { "year": 2017, "rate_sqft": 4200 },
+          { "year": 2020, "rate_sqft": 4700 },
+          { "year": 2024, "rate_sqft": 5050 },
+          { "year": 2026, "rate_sqft": 5200 }
+        ]
+      },
+      "actual_market_data": {
+        "recent_registered_rate": 7850,
+        "sales_count_5yrs": 28,
+        "transactions": [
+          { "year": 2025, "doc_no": "Doc 102/2025", "type": "Sale Agreement", "date": "10-Jan-2025", "area_sqft": 10890, "consideration": 85486500, "rate_sqft": 7850, "buyer": "Horizon Tech Parks LLP", "seller": "Meenakshi Sundaram S" },
+          { "year": 2018, "doc_no": "Doc 3180/2018", "type": "Settlement Deed", "date": "18-Sep-2018", "area_sqft": 54450, "consideration": 0, "rate_sqft": 0, "buyer": "Karthik Sundaram", "seller": "Sundaram M" }
+        ]
+      },
+      "zoning": {
+        "master_plan": "CMDA 2nd Master Plan (Chennai)",
+        "zone_code": "IT-CORR",
+        "zone_name": "Commercial IT Corridor Expressway Zone",
+        "permissible_uses": ["IT/ITES parks", "High-density commercial", "Multi-storeyed buildings", "Mixed-use retail"],
+        "fsi_standard": 2.5,
+        "fsi_premium_eligible": true,
+        "fsi_max_achievable": 4.875,
+        "frontage_road_width_m": 30.5,
+        "proposed_road_widening_m": 30.5,
+        "max_height_m": 60.0,
+        "airport_height_cap_m": 72.0,
+        "crz_applicable": false,
+        "crz_distance_m": 2400,
+        "water_body_within_15m": false,
+        "nearest_water_body": "Buckingham Canal (850m east)",
+        "temple_land_match": false,
+        "waqf_land_match": false,
+        "forest_reserve_match": false,
+        "cersai_open_charge": false,
+        "court_litigation": []
+      }
+    },
+    {
+      "survey_number": "42/2",
+      "old_survey": "19/4",
+      "district": "Chennai",
+      "taluk": "Guindy",
+      "village": "Velachery",
+      "village_code": "V-GND-02",
+      "sro": "Velachery SRO",
+      "lat": 12.9815,
+      "lng": 80.2181,
+      "extent": "0.33 Acres (14,374 sq.ft / 5.98 Grounds)",
+      "classification": "Gramanatham (Village Habitation Site)",
+      "classification_ta": "கிராமநத்தம்",
+      "patta_number": "NATHAM-104",
+      "ulpin": "TN-CH-GND-02-042-002",
+      "owners": [
+        { "name": "Venkatesan R", "name_ta": "வெங்கடேசன் ஆர்", "share": "100%", "relation": "S/o Rajagopal", "address": "Bazaar Road, Velachery, Chennai" }
+      ],
+      "guideline_value": {
+        "current_rate_sqft": 7500,
+        "current_rate_ground": 18000000,
+        "classification_igr": "Mixed Residential Road Type A",
+        "history": [
+          { "year": 2002, "rate_sqft": 600 },
+          { "year": 2007, "rate_sqft": 1800 },
+          { "year": 2012, "rate_sqft": 4500 },
+          { "year": 2017, "rate_sqft": 6000 },
+          { "year": 2020, "rate_sqft": 6800 },
+          { "year": 2024, "rate_sqft": 7200 },
+          { "year": 2026, "rate_sqft": 7500 }
+        ]
+      },
+      "actual_market_data": {
+        "recent_registered_rate": 9600,
+        "sales_count_5yrs": 19,
+        "transactions": [
+          { "year": 2023, "doc_no": "Doc 881/2023", "type": "Sale Deed", "date": "11-May-2023", "area_sqft": 1800, "consideration": 17280000, "rate_sqft": 9600, "buyer": "Kavitha M", "seller": "Venkatesan R" }
+        ]
+      },
+      "zoning": {
+        "master_plan": "CMDA 2nd Master Plan (Chennai)",
+        "zone_code": "MR-02",
+        "zone_name": "Mixed Residential Zone",
+        "permissible_uses": ["Residential", "Shops & banks on GF", "Offices", "Clinics"],
+        "fsi_standard": 2.0,
+        "fsi_premium_eligible": true,
+        "fsi_max_achievable": 3.0,
+        "frontage_road_width_m": 12.0,
+        "proposed_road_widening_m": 15.0,
+        "max_height_m": 15.25,
+        "airport_height_cap_m": 38.0,
+        "crz_applicable": false,
+        "crz_distance_m": 3100,
+        "water_body_within_15m": false,
+        "nearest_water_body": "Velachery Lake buffer (450m away)",
+        "temple_land_match": false,
+        "waqf_land_match": false,
+        "forest_reserve_match": false,
+        "cersai_open_charge": false,
+        "court_litigation": []
+      }
+    }
+  ],
+  "tncdbr_rules": {
+    "version": "TNCDBR 2019 (Tamil Nadu Combined Development and Building Rules)",
+    "road_widths": [
+      { "min_width_m": 7.2, "max_width_m": 9.0, "max_fsi": 1.75, "max_height_m": 12.0, "max_floors": "Stilt + 3", "type": "Non-MSB" },
+      { "min_width_m": 9.0, "max_width_m": 12.0, "max_fsi": 2.0, "max_height_m": 18.3, "max_floors": "Stilt + 5", "type": "Non-MSB" },
+      { "min_width_m": 12.0, "max_width_m": 18.0, "max_fsi": 2.5, "max_height_m": 24.0, "max_floors": "Stilt + 7", "type": "MSB (Multi-Storeyed Building)" },
+      { "min_width_m": 18.0, "max_width_m": 999.0, "max_fsi": 3.25, "max_height_m": 60.0, "max_floors": "High-Rise / Multi-Storeyed", "type": "MSB Special Corridor" }
+    ],
+    "stamp_duty_rates": {
+      "sale_deed": { "stamp_duty_pct": 7.0, "registration_fee_pct": 2.0, "total_pct": 9.0 },
+      "settlement_family": { "stamp_duty_pct": 1.0, "max_stamp_inr": 25000, "registration_fee_pct": 1.0, "max_reg_inr": 4000 },
+      "gift_family": { "stamp_duty_pct": 2.0, "max_stamp_inr": 40000, "registration_fee_pct": 1.0, "max_reg_inr": 4000 },
+      "partition_family": { "stamp_duty_pct": 1.0, "max_stamp_inr": 25000, "registration_fee_pct": 1.0, "max_reg_inr": 4000 },
+      "mortgage_with_possession": { "stamp_duty_pct": 4.0, "registration_fee_pct": 1.0 },
+      "mortgage_without_possession": { "stamp_duty_pct": 1.0, "registration_fee_pct": 1.0, "max_reg_inr": 40000 },
+      "first_sale_composite_flat": { "note": "Effective 1-Dec-2023, single composite sale deed on undivided share + construction cost at 7% stamp + 2% reg" }
+    }
+  }
+}
