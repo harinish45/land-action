@@ -34,6 +34,9 @@
       </div>
 
       <div class="header-right">
+        <a href="/land-action-full-project.zip" class="btn btn-sm btn-outline" download="land-action-full-project.zip">
+          📦 Full Project ZIP
+        </a>
         <a href="#sec-mcp" class="btn btn-sm btn-outline nav-tab-btn" data-target="sec-mcp">
           <span class="mcp-indicator"></span> MCP Server Active
         </a>
@@ -231,7 +234,14 @@
                 <span>Spatial Reference: WGS 84 / UTM Zone 44N (Tamil Nadu)</span>
               </div>
               <div class="parcel-selector-strip">
-                <label>Select Sample Parcel:</label>
+                <label>Basemap:</label>
+                <select id="onemap-basemap-select" class="form-select-sm" onchange="window.LandActionOneMap.setBasemap(this.value)">
+                  <option value="streets" selected>🗺️ Streets (MapTiler/OSM)</option>
+                  <option value="satellite">🛰️ Satellite (Esri Maxar)</option>
+                  <option value="terrain">🏔️ Terrain (OpenTopoMap)</option>
+                  <option value="bhuvan">🇮🇳 ISRO Bhuvan (Indian Sat)</option>
+                </select>
+                <label class="ml-2">Parcel:</label>
                 <select id="onemap-parcel-quickselect" class="form-select-sm">
                   <option value="112/5">S.No 112/5 - Karapakkam, OMR (Chennai)</option>
                   <option value="163/2">S.No 163/2 - Tambaram, GST Road (Chengalpattu)</option>
