@@ -1,0 +1,1720 @@
+{
+  "platform": "LandAction",
+  "pricing_model": "100% Free — 0 credits on all 123 minis",
+  "total_tools": 123,
+  "free_tools": 123,
+  "categories": [
+    "Location and parcel",
+    "Ownership and records",
+    "Encumbrance",
+    "Value and duty",
+    "Zones and restrictions",
+    "Planning and building",
+    "Legal and registers",
+    "Search and discovery",
+    "Documents and drafting",
+    "Customary"
+  ],
+  "tools": [
+    {
+      "id": "guideline-value",
+      "name": "Guideline value",
+      "category": "Location and parcel",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Official registration rate at a point, dated to its revision, per sq.ft and per ground.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "zone-check",
+      "name": "Zone check",
+      "category": "Location and parcel",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Master plan zone at a plot with permissible uses and restrictions.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "water-story",
+      "name": "Waterways",
+      "category": "Location and parcel",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Lakes, tanks, canals and drains near a pin with buffer distances.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "planning-authority",
+      "name": "Planning authority",
+      "category": "Location and parcel",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Which authority (CMDA / DTCP / LPA) plans a place.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "sro-finder",
+      "name": "Sub-registrar office",
+      "category": "Location and parcel",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "The SRO that registers deeds for a village, with address and contact.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "radius-discovery",
+      "name": "Every parcel within 1 km",
+      "category": "Location and parcel",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "All parcels within 1 km of a point with survey numbers and extents.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "guideline-value-survey",
+      "name": "Guideline value by survey number",
+      "category": "Location and parcel",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Guideline rate looked up by survey number instead of a pin.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "parcel-at-pin",
+      "name": "Which survey number is this pin?",
+      "category": "Location and parcel",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Resolve a lat/lng pin to its revenue survey number and village.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "digipin",
+      "name": "DIGIPIN, the digital address of a spot",
+      "category": "Location and parcel",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "The national DIGIPIN code for any point.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "pincode",
+      "name": "Pincode and post office of a spot",
+      "category": "Location and parcel",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Postal pincode and post office serving a point.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "elevation",
+      "name": "Height and slope of a plot",
+      "category": "Location and parcel",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Elevation above mean sea level and slope percentage of a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "soil-type",
+      "name": "Soil under a plot",
+      "category": "Location and parcel",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Soil classification under a point with suitability notes.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "geo-insights",
+      "name": "Terrain and land-science profile",
+      "category": "Location and parcel",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Terrain, geology and land-science profile of an area.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "land-record",
+      "name": "Land record",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Patta, chitta and land classification for a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "land-record-by-patta",
+      "name": "Land record by patta number",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Reverse lookup: patta number to survey, extent and holder.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "fmb",
+      "name": "FMB sketch",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Field Measurement Book sketch reference for a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "village-map",
+      "name": "FMB village map with survey numbers",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Village cadastral map listing all survey numbers.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "subdivision-list",
+      "name": "Subdivisions",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "All sub-divisions of a survey number (112/1 … 112/9).",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "land-quality",
+      "name": "Land class and tax",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Land classification (punjai/nanjai) and tax rate for a survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "patta-analyzer",
+      "name": "Patta analyzer",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Full patta readout: holder, share, extent, classification, mutation status.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "plot-owner",
+      "name": "Owner of a survey, from the register copy",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Recorded owner of a survey from the register copy.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "owner-at-point",
+      "name": "Who owns the land at this pin",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Owner of the parcel containing a lat/lng point.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "neighbours",
+      "name": "Who owns the plots next door",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Owners of parcels adjacent to a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "adangal",
+      "name": "Crop and cultivation record of a survey",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Adangal: crop, cultivation and area details for a survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "certificate-verify",
+      "name": "Verify a patta or TSLR certificate",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Check a patta/TSLR certificate against the digitised register.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "survey-history",
+      "name": "Survey number history (UDR and town survey)",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "What an old survey number became after UDR resurvey or town survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "old-survey-to-new",
+      "name": "Old survey number to new",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Convert a pre-UDR survey number to its current number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "new-survey-to-old",
+      "name": "New survey number to old",
+      "category": "Ownership and records",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Convert a current survey number to its pre-UDR number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "village-xray",
+      "name": "X-ray of a village",
+      "category": "Ownership and records",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "How a village is cut up: surveys, government vs private, land types.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "revenue-directory",
+      "name": "District, taluk and village directory",
+      "category": "Ownership and records",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Full district/taluk/village revenue directory of Tamil Nadu.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "sro-directory",
+      "name": "Browse the sub registrar office directory",
+      "category": "Ownership and records",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Directory of every SRO in Tamil Nadu with contact details.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ec",
+      "name": "Encumbrance certificate",
+      "category": "Encumbrance",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Full EC trail for a survey over the period the office holds.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ec-availability",
+      "name": "EC availability: years and offices for a village",
+      "category": "Encumbrance",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "How many years of EC a village has, and which offices hold them.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ec-analyzer",
+      "name": "EC analyzer",
+      "category": "Encumbrance",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Read an EC: chain of title, mortgages, attachments and gaps.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "certified-copy",
+      "name": "Certified copy of a deed",
+      "category": "Encumbrance",
+      "kind": "doc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Request/read the certified copy of a registered deed by doc number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "cersai-check",
+      "name": "Mortgages on CERSAI",
+      "category": "Encumbrance",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Open charges on the national mortgage registry for a party/survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "document-records",
+      "name": "Every record from a deed",
+      "category": "Encumbrance",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "From one deed: EC of all its surveys, patta, FMB and certified copies.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "stamp-duty",
+      "name": "Stamp duty",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Stamp duty and registration fee for a consideration and deed type.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "capital-gains",
+      "name": "Capital gains",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Capital gains tax on a land sale with indexation.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "unit-converter",
+      "name": "Unit converter",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Grounds, cents, acres, guntha, bigha, sq.ft, sq.m conversions.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "price-converter",
+      "name": "Land rate converter",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Convert rates between sq.ft, sq.m, cent, ground, acre.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "building-value",
+      "name": "Building value calculator",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Guideline building value from plinth area and floor count.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "composite-value",
+      "name": "Composite value for flats on a street",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Composite guideline value for flats on a street (land + structure).",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "locality-value",
+      "name": "Where a street sits in its locality",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "A street rate relative to its locality median.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "vacant-land-tax",
+      "name": "Vacant land tax on an assessment",
+      "category": "Value and duty",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Vacant land tax payable on an assessment number.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "tax-bill-lookup",
+      "name": "Look up a Chennai tax bill",
+      "category": "Value and duty",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Chennai corporation property tax bill by assessment number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "chennai-utility",
+      "name": "Chennai property tax, water or power at a pin",
+      "category": "Value and duty",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Property tax, water and power dues for a Chennai pin.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "utility-dues",
+      "name": "Property tax and water dues",
+      "category": "Value and duty",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Pending property tax and water dues for a property.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "crz-check",
+      "name": "CRZ coastal zone check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Whether a plot falls in CRZ-I/II/III with distance from the High Tide Line.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "water-body-check",
+      "name": "Water body and lake check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Water bodies near a plot with the 15m PWD buffer verdict.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "flood-zone-check",
+      "name": "Flood zone check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "100-year flood inundation zone status for a point.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ramsar-site-check",
+      "name": "Ramsar site and Pallikaranai marsh check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Proximity to Ramsar wetlands and the Pallikaranai marsh.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "reserve-forest-check",
+      "name": "Reserve forest check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Whether a survey is on the reserve forest list.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "eco-sensitive-zone-check",
+      "name": "Eco-sensitive zone check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Distance to the eco-sensitive buffer of parks and sanctuaries.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "asi-monument-check",
+      "name": "ASI monument zone check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "ASI prohibited (100m) and regulated (200m) zones around a monument.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "haca-check",
+      "name": "HACA hill area check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Hill Area Conservation Authority overlay on a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ht-line-check",
+      "name": "High tension line distance check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Distance to the nearest HT power line corridor with the safe buffer.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "railway-line-check",
+      "name": "Railway line distance check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Distance to railway track with the 30m setback verdict.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "quarry-check",
+      "name": "Quarry distance check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Distance to stone quarries with 300m/500m safety buffers.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "airport-zone-check",
+      "name": "Airport height zone check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "AAI colour zoning around an airport and the height rules there.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "airport-height",
+      "name": "Maximum building height near an airport",
+      "category": "Zones and restrictions",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "The height a building may rise to under airport funnel rules.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "airport-noc-issued",
+      "name": "Airport height clearances already granted near a plot",
+      "category": "Zones and restrictions",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Height NOCs already granted near a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "road-widening-check",
+      "name": "Road widening check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Proposed road widening reservation affecting a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "land-acquisition-check",
+      "name": "Is my land under acquisition",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Pending or notified land acquisition on a survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "slum-area-check",
+      "name": "Is this land in a mapped slum area",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Mapped slum area status for a point.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "slum-areas-by-ward",
+      "name": "Mapped slum areas in a corporation, zone or ward",
+      "category": "Zones and restrictions",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Slum areas mapped inside a ward or zone.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "aquifer-zone-check",
+      "name": "Aquifer recharge area check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Whether a plot is in a mapped aquifer recharge zone.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "redhills-catchment-check",
+      "name": "Redhills catchment check",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Inside the Redhills reservoir catchment area.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "forest-claim",
+      "name": "Is this survey on the forest list",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Forest department claim over a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "waqf-land",
+      "name": "Is this survey waqf land",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "TN Waqf Board listing for a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "temple-land",
+      "name": "Temple land",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "HR&CE temple land register match for a survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "temple-lands-by-name",
+      "name": "Lands of a temple, by temple name",
+      "category": "Zones and restrictions",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "All lands recorded to a temple by its name.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "waqf-lands-by-name",
+      "name": "Lands of a waqf institution, by name",
+      "category": "Zones and restrictions",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "All lands of a Waqf institution by name.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "bhoodan-land",
+      "name": "Is this survey Bhoodan land",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Bhoodan (gift land) listing for a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "industrial-park-check",
+      "name": "Is this land in an industrial park",
+      "category": "Zones and restrictions",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Industrial park estate boundaries on a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "fsi-calculator",
+      "name": "FSI calculator",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Permissible FSI from road width, use and plot type.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "building-rule-calc",
+      "name": "Building rule calculators",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Setbacks, height, parking and FAR under TNCDBR 2019.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "plot-layout",
+      "name": "How many plots a land can be cut into",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Plot count at a chosen size with internal road and rules.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "osr-fee",
+      "name": "OSR fee for a layout or sub-division",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Open space reservation fee in rupees, or land to be gifted.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "road-width",
+      "name": "Road width at a plot",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Road width measured from the cadastral map at the frontage.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "plot-area",
+      "name": "Plot area from its sides",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Area of a plot from its side lengths and frontage.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "first-sale-uds",
+      "name": "First sale flat",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Undivided share of land in a first-sale flat.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "planning-map",
+      "name": "Find the master plan sheet for a place",
+      "category": "Planning and building",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Which master plan sheet covers a place.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "cmda-land-use-check",
+      "name": "CMDA land use zone at a plot",
+      "category": "Planning and building",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "CMDA master plan land use classification at a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "master-plan-zone-check",
+      "name": "Master plan zone at a plot",
+      "category": "Planning and building",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Master plan zone code and permissible uses at a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "cba-check",
+      "name": "Continuous Building Area check",
+      "category": "Planning and building",
+      "kind": "zone",
+      "cost": "Free",
+      "credits": 0,
+      "description": "CBA overlay and its effect on development.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "approval-search",
+      "name": "Approvals on a survey number",
+      "category": "Planning and building",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Planning approvals granted on a survey number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "approvals-at-location",
+      "name": "Approvals at a location",
+      "category": "Planning and building",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Planning approvals near a lat/lng point.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "approvals-by-street-or-name",
+      "name": "Approvals by street, address or name",
+      "category": "Planning and building",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Approvals searched by street, address or project name.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "layout-lookup",
+      "name": "Approved layouts near a plot",
+      "category": "Planning and building",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Approved layouts within reach of a plot.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "street-profile",
+      "name": "Street width in Coimbatore and Salem",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Street widths from the Coimbatore/Salem street database.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "compare-plots",
+      "name": "Compare two to four plots",
+      "category": "Planning and building",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Side-by-side comparison of 2–4 plots on rate, zone and access.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "court-cases-by-name",
+      "name": "Court cases in a name",
+      "category": "Legal and registers",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Court cases involving a person or company by name.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "revenue-court",
+      "name": "Revenue court cases on a survey",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "RDO/Tahsildar revenue court proceedings on a survey.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "civil-court",
+      "name": "Case by CNR number",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "A court case by CNR: parties, status, next hearing, judge.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "rera-project",
+      "name": "Look up a RERA registered project",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "RERA project registration with filings and status.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "rera-check",
+      "name": "Search RERA agents, orders and regularisations",
+      "category": "Legal and registers",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "RERA agents, complaint orders and judgements by name or number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "seller-check",
+      "name": "Seller background check",
+      "category": "Legal and registers",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Open web, court, RERA and CMDA findings for a seller name.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "promoter-dossier",
+      "name": "Builder background",
+      "category": "Legal and registers",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Developer track record: projects, approvals, delays, cases.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "name-match",
+      "name": "Are these the same person?",
+      "category": "Legal and registers",
+      "kind": "calc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Probabilistic identity match between two name spellings.",
+      "input_params": [
+        "value",
+        "unit"
+      ]
+    },
+    {
+      "id": "glossary",
+      "name": "What a land term means",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Plain-language meaning of a Tamil Nadu land term.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "statutory-form",
+      "name": "Find a form, rule or checklist",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Statutory form, rule text or compliance checklist by name.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "igr-classification",
+      "name": "How the registration department classes a survey",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "IGR classification of a survey for valuation purposes.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "live-tracker",
+      "name": "Where a live topic stands today",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Current status of a live topic (case, approval, acquisition).",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "muhurtham-dates",
+      "name": "Muhurtham dates for registration",
+      "category": "Legal and registers",
+      "kind": "custom",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Auspicious registration dates in a window from the Tamil calendar.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "property-panchangam",
+      "name": "Property panchangam for a day",
+      "category": "Legal and registers",
+      "kind": "custom",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Day panchangam: raahu kaalam, nakshatram, thithi and SRO open status.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "manaiyadi",
+      "name": "Manaiyadi Sastram verdict",
+      "category": "Legal and registers",
+      "kind": "custom",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Manaiyadi Sastram share verdict for an ancestral property.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "cmda-check",
+      "name": "Search the CMDA registers",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Search CMDA approval registers by survey, street or project.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "cmda-register",
+      "name": "Search the CMDA file registers",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Search CMDA file registers for a building or layout file number.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ppa-approval",
+      "name": "Search planning permission approvals",
+      "category": "Legal and registers",
+      "kind": "record",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Search PPAs granted by CMDA/DTCP for a place or applicant.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "owner-search",
+      "name": "Every plot in a name",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "All parcels recorded in one owner name across the state.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ancestral-search",
+      "name": "Trace an ancestor's land",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Trace an ancestor's parcels from name and native place.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "area-discovery",
+      "name": "Every parcel in a village",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Sweep a village for parcels matching extent and zone filters.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "tnahr-search",
+      "name": "Search the historical archives",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Search 450,000+ digitised settlement registers, GOs and gazettes.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "commercial-lookup",
+      "name": "Commercial connection lookup",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Chennai commercial electricity and GST register by name or GSTIN.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "ground-watch",
+      "name": "Ground Watch",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Watch a topic and get notified when the ground truth changes.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "sales-watch",
+      "name": "Sales Watch",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Watch registered sales in an area as deeds are filed.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "industrial-parks",
+      "name": "Industrial parks and vacant plots",
+      "category": "Search and discovery",
+      "kind": "search",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Industrial parks with vacant plots and utilities status.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "deed-drafter",
+      "name": "Draft a deed or agreement",
+      "category": "Documents and drafting",
+      "kind": "doc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Draft a sale deed, agreement or gift deed from structured inputs.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "document-translation",
+      "name": "Document translation, Tamil and English",
+      "category": "Documents and drafting",
+      "kind": "doc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Translate a Tamil or English property document keeping structure.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "rent-receipts",
+      "name": "Rent receipts and invoices",
+      "category": "Documents and drafting",
+      "kind": "doc",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Generate rent receipts and invoices for a tenancy.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "plot-vastu",
+      "name": "Vastu score of a plot",
+      "category": "Customary",
+      "kind": "custom",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Vastu verdict for a plot from facing, shape and road layout.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    },
+    {
+      "id": "home-vastu",
+      "name": "Vastu score of a house",
+      "category": "Customary",
+      "kind": "custom",
+      "cost": "Free",
+      "credits": 0,
+      "description": "Vastu score of a house from facing and room layout.",
+      "input_params": [
+        "survey_no",
+        "village",
+        "district"
+      ]
+    }
+  ]
+}

@@ -10,7 +10,9 @@
   "host_permissions": [
     "*://*.google.com/maps*",
     "*://earth.google.com/*",
-    "http://localhost:3000/*"
+    "http://localhost:3000/*",
+    "https://land-action.vercel.app/*",
+    "https://*.vercel.app/*"
   ],
   "action": {
     "default_popup": "popup.html",

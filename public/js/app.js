@@ -51,17 +51,27 @@
     });
   }
 
-  // Initialize individual submodules
+  // Initialize individual submodules — each guarded so one failing module
+  // can never prevent the others from booting.
   function initProductModules() {
-    if (window.LandActionOneMap) window.LandActionOneMap.init();
-    if (window.LandActionMinis) window.LandActionMinis.init();
-    if (window.LandActionVerify) window.LandActionVerify.init();
-    if (window.LandActionPriceMap) window.LandActionPriceMap.init();
-    if (window.LandActionBuildScope) window.LandActionBuildScope.init();
-    if (window.LandActionLegalOpinion) window.LandActionLegalOpinion.init();
-    if (window.LandActionTracker) window.LandActionTracker.init();
-    if (window.LandActionDealRoom) window.LandActionDealRoom.init();
-    if (window.LandActionMcpTester) window.LandActionMcpTester.init();
+    const modules = [
+      ['OneMap', () => window.LandActionOneMap && window.LandActionOneMap.init()],
+      ['Minis', () => window.MinisEngine && window.MinisEngine.init()],
+      ['Verify', () => window.VerifyMyLandEngine && window.VerifyMyLandEngine.init()],
+      ['PriceMap', () => window.LandActionPriceMap && window.LandActionPriceMap.init()],
+      ['BuildScope', () => window.LandActionBuildScope && window.LandActionBuildScope.init()],
+      ['LegalOpinion', () => window.LandActionLegalOpinion && window.LandActionLegalOpinion.init()],
+      ['Tracker', () => window.LandActionTracker && window.LandActionTracker.init()],
+      ['DealRoom', () => window.LandActionDealRoom && window.LandActionDealRoom.init()],
+      ['McpTester', () => window.LandActionMcpTester && window.LandActionMcpTester.init()]
+    ];
+    for (const [name, boot] of modules) {
+      try {
+        boot();
+      } catch (err) {
+        console.error(`[LandAction] ${name} module failed to init:`, err);
+      }
+    }
   }
 
   // Veritas AI Chatbot
@@ -92,7 +102,7 @@
         });
         const data = await resp.json();
         removeTypingIndicator(typingId);
-        appendChatMessage('assistant', data.reply);
+        appendChatMessage('assistant', data.reply, data.citations);
       } catch (err) {
         removeTypingIndicator(typingId);
         appendChatMessage('assistant', "I'm experiencing a temporary network error. You can still use the 123 free Minis tools and One Map layers directly!");
@@ -112,7 +122,7 @@
       });
     });
 
-    function appendChatMessage(sender, text) {
+    function appendChatMessage(sender, text, citations) {
       const div = document.createElement('div');
       div.className = `chat-bubble ${sender}`;
       
@@ -125,7 +135,7 @@
           <span class="bubble-name font-mono">${name}</span>
           <span class="bubble-time">${new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}</span>
         </div>
-        <div class="bubble-content">${formatChatMarkdown(text)}</div>
+        <div class="bubble-content">${formatChatMarkdown(text)}${Array.isArray(citations) && citations.length ? `<div class="chat-citations"><span class="cite-label">Sources:</span> ` + citations.map(c => `<span class="cite-chip">${String(c).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</span>`).join('') + `</div>` : ''}</div>
       `;
 
       messagesContainer.appendChild(div);

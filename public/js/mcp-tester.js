@@ -2,7 +2,8 @@
 (function() {
   'use strict';
 
-  const mcpToolsList = [
+  // Fallback list used only if the live tools/list endpoint is unreachable.
+  const fallbackTools = [
     {
       name: "landaction_search_parcel",
       desc: "Search Tamil Nadu land parcel by survey number, district, taluk, or coordinates",
@@ -35,10 +36,37 @@
     }
   ];
 
-  function initMcpTester() {
+  let mcpToolsList = fallbackTools;
+
+  // Live tools/list from the server (33 core + 123 minis = 156)
+  async function fetchLiveTools() {
+    try {
+      const res = await fetch('/mcp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' })
+      });
+      const data = await res.json();
+      const tools = data?.result?.tools;
+      if (Array.isArray(tools) && tools.length) {
+        mcpToolsList = tools.map(t => ({
+          name: t.name,
+          desc: t.description || '',
+          sampleArgs: t.name.startsWith('mini_') ? { survey_no: '112/5' } : { survey_no: '112/5', village: 'Karapakkam' }
+        }));
+        return true;
+      }
+    } catch { /* keep fallback */ }
+    return false;
+  }
+
+  async function initMcpTester() {
+    await fetchLiveTools();
     setupToolSelector();
     setupConfigTabs();
     setupExecuteBtn();
+    const badge = document.getElementById('mcp-latency-badge');
+    if (badge) badge.textContent = `${mcpToolsList.length} Tools Live (HTTP & Stdio)`;
   }
 
   function setupToolSelector() {

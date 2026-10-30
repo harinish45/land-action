@@ -56,7 +56,7 @@
       "post": {
         "summary": "Run Specialized Real Estate Mini Tool",
         "operationId": "runMiniTool",
-        "description": "Executes specialized real estate calculators (stamp duty, guideline value, zoning check, Patta verification, build scope).",
+        "description": "Executes specialized real estate calculators (stamp duty, guideline value, zoning check, Patta verification, build scope). Always free: cost 0 credits.",
         "parameters": [
           {
             "name": "toolId",
@@ -64,7 +64,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["guideline_value", "stamp_duty", "zone_check", "fetch_land_record", "ec_transactions", "build_scope"]
+              "description": "Any of the 33 core tool slugs (see GET /api/v1/tools) e.g. guideline_value, stamp_duty, zone_check, fetch_land_record, ec_transactions, build_scope, unit_convert"
             }
           }
         ],
@@ -87,6 +87,88 @@
         "responses": {
           "200": {
             "description": "Tool calculation result."
+          }
+        }
+      }
+    },
+    "/api/v1/tools": {
+      "get": {
+        "summary": "List All Core Tools (33)",
+        "operationId": "listTools",
+        "description": "Lists the 33 core LandAction tools with slugs, pricing (all free) and categories.",
+        "responses": {
+          "200": {
+            "description": "Tool catalog with total_tools and tools array."
+          }
+        }
+      }
+    },
+    "/api/v1/minis": {
+      "get": {
+        "summary": "List All 123 Free Minis",
+        "operationId": "listMinis",
+        "description": "Lists the 123 free LandAction Mini calculators across 10 categories. All cost 0 credits.",
+        "responses": {
+          "200": {
+            "description": "Minis catalog with total, categories and tools array."
+          }
+        }
+      }
+    },
+    "/api/v1/minis/{slug}/run": {
+      "post": {
+        "summary": "Run a Free Mini Calculator",
+        "operationId": "runMini",
+        "description": "Runs one of the 123 minis. Always free: response reports charged:false. Body accepts survey_no/query/value/property_value.",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Mini slug e.g. guideline-value, stamp-duty-tn, fsi-calculator"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mini result with verdict, rows, charged:false."
+          }
+        }
+      }
+    },
+    "/api/v1/geo/districts": {
+      "get": {
+        "summary": "List Tamil Nadu Districts",
+        "operationId": "listDistricts",
+        "description": "Lists all 38 Tamil Nadu districts in the cadastral register.",
+        "responses": {
+          "200": {
+            "description": "District list with total and districts array."
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{docType}": {
+      "post": {
+        "summary": "Generate a Land Document Extract",
+        "operationId": "generateDocument",
+        "description": "Generates a document extract (patta-chitta, ec, guideline, zoning, fmb, a-register, or bundle) for a survey number. Free.",
+        "parameters": [
+          {
+            "name": "docType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["patta-chitta", "ec", "guideline", "zoning", "fmb", "a-register", "bundle"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Document extract payload."
           }
         }
       }

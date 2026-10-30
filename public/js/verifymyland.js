@@ -5,30 +5,30 @@ window.VerifyMyLandEngine = {
 
   init() {
     this.bindEvents();
-    // Generate initial report for default survey 112/5
-    this.generateReport("112/5", "Ramanathan K");
+    // Deep link: ?report=<survey> from a share link
+    const params = new URLSearchParams(location.search);
+    const shareSurvey = params.get('report');
+    const surveyInput = document.getElementById('verify-input-survey');
+    if (shareSurvey) {
+      this.generateReport(shareSurvey, params.get('seller') || 'Ramanathan K');
+    } else if (surveyInput) {
+      this.generateReport(surveyInput.value || '112/5', 'Ramanathan K');
+    }
   },
 
   bindEvents() {
-    const btn = document.getElementById('btn-run-vml');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const survey = document.getElementById('vml-survey-input').value || '112/5';
-        const seller = document.getElementById('vml-seller-input').value || 'Ramanathan K';
-        this.generateReport(survey, seller);
-      });
-    }
-
-    const printBtn = document.getElementById('btn-print-vml');
-    if (printBtn) {
-      printBtn.addEventListener('click', () => {
-        window.print();
+    const runBtn = document.getElementById('verify-run-btn');
+    if (runBtn && !runBtn.dataset.vmlBound) {
+      runBtn.dataset.vmlBound = '1';
+      runBtn.addEventListener('click', () => {
+        const survey = document.getElementById('verify-input-survey')?.value || '112/5';
+        this.generateReport(survey, 'Ramanathan K');
       });
     }
   },
 
   async generateReport(surveyNo, sellerName) {
-    const container = document.getElementById('vml-report-container');
+    const container = document.getElementById('verify-results-container');
     if (!container) return;
 
     container.innerHTML = `
@@ -53,7 +53,7 @@ window.VerifyMyLandEngine = {
   },
 
   renderReport(report) {
-    const container = document.getElementById('vml-report-container');
+    const container = document.getElementById('verify-results-container');
     if (!container || !report) return;
 
     const checksHtml = report.thirty_three_checks.map(c => `
@@ -114,11 +114,31 @@ window.VerifyMyLandEngine = {
           </tbody>
         </table>
 
-        <div style="margin-top:24px; padding-top:16px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem; color:#64748b;">
+        <div style="margin-top:24px; padding-top:16px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem; color:#64748b; flex-wrap:wrap; gap:10px;">
           <span>Data grounded in TN Revenue, IGR, CERSAI, CMDA and DTCP registers.</span>
-          <span>LandAction · Open Land Intelligence</span>
+          <span style="display:flex; gap:8px; align-items:center;">
+            <span class="free-pill">Shareable · no login · free</span>
+            <button class="btn btn-sm btn-outline" onclick="window.VerifyMyLandEngine.copyShareLink('${report.report_id}')">🔗 Copy share link</button>
+          </span>
         </div>
       </div>
     `;
+  },
+
+  copyShareLink(reportId) {
+    const report = this.currentReport;
+    if (!report) return;
+    // Matches the deep-link the module reads on init: ?report=<survey>&seller=<name>
+    const finalUrl = `${location.origin}${location.pathname}?report=${encodeURIComponent(report.target.survey_number)}`;
+    const write = navigator.clipboard?.writeText
+      ? navigator.clipboard.writeText(finalUrl)
+      : Promise.reject(new Error('Clipboard blocked — copy the address bar URL instead'));
+    write.then(
+      () => alert(`Share link copied!\n${finalUrl}\nReport ${reportId} · free, no login needed.`),
+      () => prompt('Copy this share link:', finalUrl)
+    );
   }
 };
+
+// Legacy alias expected by app.js
+window.LandActionVerify = window.VerifyMyLandEngine;

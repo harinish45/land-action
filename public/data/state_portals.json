@@ -11,7 +11,13 @@
       "registration_url": "https://tnreginet.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Chennai", "Chengalpattu", "Kanchipuram", "Thiruvallur", "Coimbatore"]
+      "sample_districts": [
+        "Chennai",
+        "Chengalpattu",
+        "Kanchipuram",
+        "Thiruvallur",
+        "Coimbatore"
+      ]
     },
     {
       "state_code": "KA",
@@ -22,7 +28,12 @@
       "registration_url": "https://kaverionline.karnataka.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Bengaluru Urban", "Bengaluru Rural", "Mysuru", "Dakshina Kannada"]
+      "sample_districts": [
+        "Bengaluru Urban",
+        "Bengaluru Rural",
+        "Mysuru",
+        "Dakshina Kannada"
+      ]
     },
     {
       "state_code": "MH",
@@ -33,7 +44,13 @@
       "registration_url": "https://igrmaharashtra.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Mumbai Suburban", "Pune", "Thane", "Nagpur", "Nashik"]
+      "sample_districts": [
+        "Mumbai Suburban",
+        "Pune",
+        "Thane",
+        "Nagpur",
+        "Nashik"
+      ]
     },
     {
       "state_code": "AP",
@@ -44,18 +61,28 @@
       "registration_url": "https://registration.ap.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Visakhapatnam", "Krishna", "Guntur", "Chittoor"]
+      "sample_districts": [
+        "Visakhapatnam",
+        "Krishna",
+        "Guntur",
+        "Chittoor"
+      ]
     },
     {
       "state_code": "TS",
       "state_name": "Telangana",
-      "portal_name": "Dharani Portal",
-      "revenue_url": "https://dharani.telangana.gov.in",
+      "portal_name": "Bhu Bharati (ROR-1B / Pahani)",
+      "revenue_url": "https://bhubharati.telangana.gov.in",
       "registration_portal": "Dharani Integrated Land Record",
       "registration_url": "https://dharani.telangana.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Hyderabad", "Ranga Reddy", "Medchal-Malkajgiri", "Sangareddy"]
+      "sample_districts": [
+        "Hyderabad",
+        "Ranga Reddy",
+        "Medchal-Malkajgiri",
+        "Sangareddy"
+      ]
     },
     {
       "state_code": "GJ",
@@ -66,7 +93,12 @@
       "registration_url": "https://garvi.gujarat.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Ahmedabad", "Surat", "Vadodara", "Rajkot"]
+      "sample_districts": [
+        "Ahmedabad",
+        "Surat",
+        "Vadodara",
+        "Rajkot"
+      ]
     },
     {
       "state_code": "RJ",
@@ -77,7 +109,12 @@
       "registration_url": "https://epanjiyan.rajasthan.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Jaipur", "Jodhpur", "Udaipur", "Kota"]
+      "sample_districts": [
+        "Jaipur",
+        "Jodhpur",
+        "Udaipur",
+        "Kota"
+      ]
     },
     {
       "state_code": "UP",
@@ -88,7 +125,12 @@
       "registration_url": "https://igrsup.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Gautam Buddha Nagar (Noida)", "Lucknow", "Ghaziabad", "Kanpur"]
+      "sample_districts": [
+        "Gautam Buddha Nagar (Noida)",
+        "Lucknow",
+        "Ghaziabad",
+        "Kanpur"
+      ]
     },
     {
       "state_code": "WB",
@@ -99,7 +141,12 @@
       "registration_url": "https://wbregistration.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Kolkata", "North 24 Parganas", "South 24 Parganas", "Howrah"]
+      "sample_districts": [
+        "Kolkata",
+        "North 24 Parganas",
+        "South 24 Parganas",
+        "Howrah"
+      ]
     },
     {
       "state_code": "KL",
@@ -110,7 +157,293 @@
       "registration_url": "https://keralaregistration.gov.in",
       "ulpin_enabled": true,
       "cadastral_maps_online": true,
-      "sample_districts": ["Ernakulam (Kochi)", "Thiruvananthapuram", "Kozhikode"]
+      "sample_districts": [
+        "Ernakulam (Kochi)",
+        "Thiruvananthapuram",
+        "Kozhikode"
+      ]
+    },
+    {
+      "state_code": "OD",
+      "state_name": "Odisha",
+      "portal_name": "Bhulekh Odisha (ROR / Khatiyan)",
+      "revenue_url": "https://bhulekh.ori.nic.in",
+      "registration_portal": "IGR Odisha (e-Registration)",
+      "registration_url": "https://www.igrodisha.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Khordha (Bhubaneswar)",
+        "Cuttack",
+        "Sambalpur",
+        "Puri"
+      ]
+    },
+    {
+      "state_code": "PB",
+      "state_name": "Punjab",
+      "portal_name": "Jamabandi Punjab (Fard / Jamabandi)",
+      "revenue_url": "https://jamabandi.punjab.gov.in",
+      "registration_portal": "IGR Punjab",
+      "registration_url": "https://graspunjab.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Ludhiana",
+        "Amritsar",
+        "Jalandhar",
+        "Patiala"
+      ]
+    },
+    {
+      "state_code": "HR",
+      "state_name": "Haryana",
+      "portal_name": "Jamabandi HALRIS (Jamabandi Nakal)",
+      "revenue_url": "https://jamabandi.nic.in",
+      "registration_portal": "HARIS (Registration Haryana)",
+      "registration_url": "https://jamabandi.nic.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Gurugram",
+        "Faridabad",
+        "Hisar",
+        "Karnal"
+      ]
+    },
+    {
+      "state_code": "BR",
+      "state_name": "Bihar",
+      "portal_name": "Bihar Bhumi (Jamabandi / Khatiyan)",
+      "revenue_url": "https://biharbhumi.bihar.gov.in",
+      "registration_portal": "IGR Bihar (e-Nibandhan)",
+      "registration_url": "https://bhumijankari.bihar.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Patna",
+        "Gaya",
+        "Muzaffarpur",
+        "Bhagalpur"
+      ]
+    },
+    {
+      "state_code": "MP",
+      "state_name": "Madhya Pradesh",
+      "portal_name": "MP Bhulekh (Khasra / B-1 / Khatauni)",
+      "revenue_url": "https://mpbhulekh.gov.in",
+      "registration_portal": "Sampada 2.0 (IGR MP)",
+      "registration_url": "https://www.mpsampada.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Bhopal",
+        "Indore",
+        "Gwalior",
+        "Jabalpur"
+      ]
+    },
+    {
+      "state_code": "CG",
+      "state_name": "Chhattisgarh",
+      "portal_name": "Bhuiyan (Khasra / B-1 / P-II)",
+      "revenue_url": "https://bhuiyan.cg.nic.in",
+      "registration_portal": "e-Panjeeyan CG",
+      "registration_url": "https://epanjeeyan.cg.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Raipur",
+        "Bilaspur",
+        "Durg",
+        "Korba"
+      ]
+    },
+    {
+      "state_code": "JH",
+      "state_name": "Jharkhand",
+      "portal_name": "Jharbhoomi (Register-II / Khatiyan)",
+      "revenue_url": "https://jharbhoomi.jharkhand.gov.in",
+      "registration_portal": "NGDRS Jharkhand",
+      "registration_url": "https://jharbhoomi.jharkhand.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Ranchi",
+        "Dhanbad",
+        "Jamshedpur",
+        "Bokaro"
+      ]
+    },
+    {
+      "state_code": "AS",
+      "state_name": "Assam",
+      "portal_name": "Dharitree ILRMS (Jamabandi / Chitha)",
+      "revenue_url": "https://ilrms.assam.gov.in",
+      "registration_portal": "IGR Assam",
+      "registration_url": "https://igrassam.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Kamrup Metro (Guwahati)",
+        "Dibrugarh",
+        "Nagaon",
+        "Cachar"
+      ]
+    },
+    {
+      "state_code": "UK",
+      "state_name": "Uttarakhand",
+      "portal_name": "Bhulekh Uttarakhand (Khatauni)",
+      "revenue_url": "https://bhulekh.uk.gov.in",
+      "registration_portal": "IGR Uttarakhand",
+      "registration_url": "https://registration.uk.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Dehradun",
+        "Haridwar",
+        "Nainital",
+        "Udham Singh Nagar"
+      ]
+    },
+    {
+      "state_code": "HP",
+      "state_name": "Himachal Pradesh",
+      "portal_name": "HimBhoomi (Jamabandi / Tatima)",
+      "revenue_url": "https://himbhoomilmk.nic.in",
+      "registration_portal": "NGDRS Himachal",
+      "registration_url": "https://himbhoomilmk.nic.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Shimla",
+        "Kangra",
+        "Mandi",
+        "Solan"
+      ]
+    },
+    {
+      "state_code": "GA",
+      "state_name": "Goa",
+      "portal_name": "Goa DSLR (Form I & XIV)",
+      "revenue_url": "https://dslr.goa.gov.in",
+      "registration_portal": "NGDRS Goa",
+      "registration_url": "https://dslr.goa.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "North Goa",
+        "South Goa"
+      ]
+    },
+    {
+      "state_code": "DL",
+      "state_name": "Delhi",
+      "portal_name": "Bhu-Naksha Delhi / DORIS (Khatoni)",
+      "revenue_url": "https://doris.delhi.gov.in",
+      "registration_portal": "DORIS (Revenue Delhi)",
+      "registration_url": "https://doris.delhi.gov.in",
+      "ulpin_enabled": true,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "New Delhi",
+        "South Delhi",
+        "South West Delhi",
+        "North West Delhi"
+      ]
+    },
+    {
+      "state_code": "JK",
+      "state_name": "Jammu & Kashmir",
+      "portal_name": "Apni Zameen (Jamabandi / Girdawari)",
+      "revenue_url": "https://landrecords.jk.gov.in",
+      "registration_portal": "NGDRS J&K",
+      "registration_url": "https://landrecords.jk.gov.in",
+      "ulpin_enabled": false,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Srinagar",
+        "Jammu",
+        "Baramulla",
+        "Anantnag"
+      ]
+    },
+    {
+      "state_code": "PY",
+      "state_name": "Puducherry",
+      "portal_name": "FMB & Patta Online Puducherry",
+      "revenue_url": "https://py.gov.in/fmb-and-patta",
+      "registration_portal": "Registration Dept. Puducherry",
+      "registration_url": "https://py.gov.in/fmb-and-patta",
+      "ulpin_enabled": false,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Puducherry",
+        "Karaikal",
+        "Mahe",
+        "Yanam"
+      ]
+    },
+    {
+      "state_code": "AN",
+      "state_name": "Andaman & Nicobar",
+      "portal_name": "e-Dweep (Revenue Records)",
+      "revenue_url": "https://edweep.andaman.gov.in",
+      "registration_portal": "Revenue Dept. A&N",
+      "registration_url": "https://edweep.andaman.gov.in",
+      "ulpin_enabled": false,
+      "cadastral_maps_online": false,
+      "sample_districts": [
+        "South Andaman (Port Blair)",
+        "North & Middle Andaman",
+        "Nicobar"
+      ]
+    },
+    {
+      "state_code": "CH",
+      "state_name": "Chandigarh",
+      "portal_name": "Chandigarh Revenue Records",
+      "revenue_url": "https://chandigarh.gov.in",
+      "registration_portal": "Estate Office Chandigarh",
+      "registration_url": "https://chandigarh.gov.in",
+      "ulpin_enabled": false,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Chandigarh"
+      ]
+    },
+    {
+      "state_code": "SK",
+      "state_name": "Sikkim",
+      "portal_name": "Sikkim Revenue Records (Parcha)",
+      "revenue_url": "https://sikkim.gov.in",
+      "registration_portal": "Land Revenue Dept. Sikkim",
+      "registration_url": "https://sikkim.gov.in",
+      "ulpin_enabled": false,
+      "cadastral_maps_online": false,
+      "sample_districts": [
+        "Gangtok",
+        "Namchi",
+        "Gyalshing",
+        "Mangan"
+      ]
+    },
+    {
+      "state_code": "TR",
+      "state_name": "Tripura",
+      "portal_name": "Jami Tripura (Khatian)",
+      "revenue_url": "https://jami.tripura.gov.in",
+      "registration_portal": "IGR Tripura",
+      "registration_url": "https://jami.tripura.gov.in",
+      "ulpin_enabled": false,
+      "cadastral_maps_online": true,
+      "sample_districts": [
+        "Agartala (West Tripura)",
+        "Gomati",
+        "Unakoti",
+        "Dhalai"
+      ]
     }
   ]
 }

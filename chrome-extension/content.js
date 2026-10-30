@@ -68,7 +68,7 @@ function injectLandActionOverlay() {
         <li class="pass">✓ Road width: 18.0m (FSI 2.0 to 3.25 permissible)</li>
       </ul>
 
-      <a href="http://localhost:3000/#vml" target="_blank" class="la-full-report-btn">
+      <a href="https://land-action.vercel.app/#sec-verifymyland" target="_blank" class="la-full-report-btn">
         Open Full 33-Check LandAction Report
       </a>
     </div>
